@@ -50,6 +50,10 @@ body {
 	border-bottom: 2px solid black;
 }
 
+.logo:hover {
+	border-bottom: none;
+}
+
 .nav__list li {
 	list-style: none;
 }
@@ -238,4 +242,5 @@ body {
 	.imgquestion {
 		display: none;
 	}
+
 }
