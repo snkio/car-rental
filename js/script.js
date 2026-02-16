@@ -1,3 +1,17 @@
+const burgerBtn = document.querySelector('#burgerBtn')
+const navMenu = document.querySelector('.nav__list')
+const navElem = document.querySelectorAll('.nav__elem a')
+
+burgerBtn.addEventListener('click', () => {
+	navMenu.classList.toggle('active')
+})
+
+navElem.forEach((link) => {
+	link.addEventListener('click', () => {
+		navMenu.classList.remove('active')
+	})
+})
+
 const mainbutton = document.getElementById("main-action")
 mainbutton.onclick = () => {
 	document.getElementById("auto").scrollIntoView({ behavior: "smooth" })
