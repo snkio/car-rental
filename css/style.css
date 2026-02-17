@@ -16,6 +16,8 @@
 
 html {
 	font-size: 62.5%;
+    scroll-behavior: smooth;
+}
 }
 
 body {
@@ -319,4 +321,5 @@ body {
 	body> :not(.header) {
 		padding: 0 1.2rem;
 	}
+
 }
