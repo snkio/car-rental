@@ -16,8 +16,9 @@
 
 html {
 	font-size: 62.5%;
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
+
 
 body {
 	font-family: 'Roboto', sans-serif;
@@ -223,10 +224,60 @@ body {
 	cursor: pointer;
 }
 
+@keyframes slideIn {
+	from {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+
+@media (max-width: 1200px) {
+
+	body> :not(.header) {
+		padding: 0 3rem;
+	}
+
+	.main__info {
+		background: none;
+	}
+
+	.imgquestion {
+		max-width: 800px;
+	}
+
+	.btnprice {
+		margin-bottom: 2rem;
+	}
+
+}
+
+@media (max-width: 992px) {
+	.imgquestion {
+		display: none;
+	}
+}
+
 @media (max-width: 768px) {
 
-	html {
-		font-size: 62.5%;
+	body> :not(.header) {
+		padding: 0 2.5rem;
+	}
+
+	.h1__text {
+		font-size: 5rem;
+		margin-bottom: 2.5rem;
+		padding-top: 3rem;
+	}
+
+	.h2__text {
+		font-size: 4.5rem;
+		margin-top: 3.5rem;
 	}
 
 	.burger-btn {
@@ -236,19 +287,8 @@ body {
 		right: 3rem;
 	}
 
-	body> :not(.header) {
-		padding: 0 2.5rem;
-	}
-
 	.nav__list {
 		display: none;
-		flex-direction: column;
-		top: 2rem;
-		right: 1rem;
-		position: absolute;
-		background-color: white;
-		border-radius: 1rem;
-		box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.1);
 	}
 
 	.nav__elem:hover {
@@ -258,6 +298,18 @@ body {
 	.nav__elem {
 		margin-right: 0;
 		padding: 1.5rem 2.5rem;
+	}
+
+	.nav__list {
+		display: none;
+		flex-direction: column;
+		top: 4rem;
+		right: 1rem;
+		position: absolute;
+		background-color: white;
+		border-radius: 1rem;
+		box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
+		animation: slideIn 0.3s ease-out;
 	}
 
 	.nav__list.active {
@@ -273,22 +325,8 @@ body {
 		margin-bottom: 2rem;
 	}
 
-	.h1__text {
-		margin-bottom: 2.5rem;
-		padding-top: 3rem;
-	}
-
-	.h2__text {
-		margin-top: 3.5rem;
-	}
-
 	.footer-info {
 		margin: 2rem 0;
-	}
-
-	.card__item {
-		max-width: 700px;
-		align-items: center;
 	}
 
 	.imgquestion {
@@ -296,30 +334,18 @@ body {
 	}
 }
 
-@media (max-width: 600px) {
-
-	html {
-		font-size: 56.5%;
+@media (max-width: 576px) {
+	.nav__elem {
+		margin-right: 0px;
 	}
+}
 
+@media (max-width: 360px) {
 	body> :not(.header) {
 		padding: 0 1rem;
 	}
-}
-
-@media (max-width: 480px) {
-	html {
-		font-size: 50%;
-	}
 
 	.h1__text {
-		font-size: 6rem;
+		font-size: 3rem;
 	}
-
-
-	body> :not(.header) {
-		padding: 0 1.2rem;
-	}
-
 }
-
